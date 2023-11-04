@@ -47,15 +47,37 @@ flex-direction: column;
 }
 
 /* Card Styles*/
+
+.cards--list{
+  display: flex;
+  margin: 20px auto;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow-x: auto;
+
+}
+
 .card {
-  width: 267px;
-  font-size: 18px;
-  font-weight: 400;
+  width: 175px;
+  font-size: 12px;
+  flex: 0 0 auto;
+  /* ADD */
+  display: flex;
+  /* ADD */
+  flex-direction: column;
+  /* ADD */
 }
 
 .card--image {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+/* ADD */
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card--stats {
@@ -65,4 +87,9 @@ flex-direction: column;
 
 .card--star {
   height: 14px;
+}
+
+/* ADD */
+.card--price {
+  margin-top: auto;
 }

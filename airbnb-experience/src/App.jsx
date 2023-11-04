@@ -22,9 +22,11 @@ function App() {
   return (
     
       <div>
-       <Nav/>
-       <Hero/>
-      {cardElements}
+          <Nav/>
+          <Hero/>
+          <section className="cards--list">
+              {cardElements}
+          </section>
       </div> 
   )
 }
