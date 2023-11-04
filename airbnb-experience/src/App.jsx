@@ -13,14 +13,10 @@ function App() {
      title = {data.title}
      price = {data.price}
      rating ={data.stats.rating}
-     location ={data.location}reviewCount = {data.stats.reviewCount}
-
-
-    
+     location ={data.location}reviewCount = {data.stats.reviewCount} 
     />
   } )
   return (
-    
       <div>
           <Nav/>
           <Hero/>

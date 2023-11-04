@@ -50,7 +50,7 @@ flex-direction: column;
 
 .cards--list{
   display: flex;
-  margin: 20px auto;
+  margin:5px auto;
   justify-content: flex-start;
   gap: 24px;
   overflow-x: auto;
