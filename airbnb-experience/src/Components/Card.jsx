@@ -1,6 +1,6 @@
 import React from 'react';
-import katie from "../assets/katie-zaferes.png"
-import star from "../assets/star.png"
+import katie from "../../public/assets/katie-zaferes.png"
+import star from "../../public/assets/star.png"
 
 
 export default function Card() {
