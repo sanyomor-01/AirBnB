@@ -1,33 +1,33 @@
-import React from 'react';
-import Nav from "./Components/Nav"
+import React from "react"
+import Navbar from "./Components/Nav"
 import Hero from "./Components/Hero"
 import Card from "./Components/Card"
 import data from "./data"
-import './App.css'
 
-function App() {
-
-  const cardElements = data.map( (data) =>{
-    return <Card
-    key = {data.id}
-     img = {data.coverImg}
-     title = {data.title}
-     price = {data.price}
-     rating ={data.stats.rating}
-     location ={data.location}reviewCount = {data.stats.reviewCount} 
-     openSpots = {data.openSpots}
-
-    />
-  } )
-  return (
-      <div>
-          <Nav/>
-          <Hero/>
-          <section className="cards--list">
-              {cardElements}
-          </section>
-      </div> 
-  )
+export default function App() {
+    const cards = data.map(item => {
+        return (
+            <Card
+                key={item.id}
+                img={item.coverImg}
+                rating={item.stats.rating}
+                reviewCount={item.stats.reviewCount}
+                location={item.location}
+                title={item.title}
+                price={item.price}
+                openSpots={item.openSpots}
+            />
+        )
+    })        
+    
+            // <Hero />
+    return (
+        <div>
+            <Navbar />
+            <Hero/>
+            <section className="cards-list">
+                {cards}
+            </section>
+        </div>
+    )
 }
-
-export default App
