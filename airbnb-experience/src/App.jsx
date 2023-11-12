@@ -9,11 +9,14 @@ function App() {
 
   const cardElements = data.map( (data) =>{
     return <Card
+    key = {data.id}
      img = {data.coverImg}
      title = {data.title}
      price = {data.price}
      rating ={data.stats.rating}
      location ={data.location}reviewCount = {data.stats.reviewCount} 
+     openSpots = {data.openSpots}
+
     />
   } )
   return (

@@ -58,14 +58,13 @@ flex-direction: column;
 }
 
 .card {
-  width: 175px;
+  width: 200px;
   font-size: 12px;
   flex: 0 0 auto;
-  /* ADD */
   display: flex;
-  /* ADD */
+  position: relative;
   flex-direction: column;
-  /* ADD */
+
 }
 
 .card--image {
@@ -89,7 +88,17 @@ flex-direction: column;
   height: 14px;
 }
 
-/* ADD */
+
 .card--price {
   margin-top: auto;
+}
+
+.card-badge{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: #fff;
+  padding: 5px 7px;
+  font-weight: bold;
+  border-radius: 2px;
 }
