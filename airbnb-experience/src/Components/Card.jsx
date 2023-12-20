@@ -1,4 +1,6 @@
 import React from "react"
+import '../App.css'
+import star from '../images/star.png'
 
 export default function Card(props) {
     let badgeText
@@ -8,20 +10,27 @@ export default function Card(props) {
         badgeText = "ONLINE"
     }
     
-
-    
     return (
         <div className="card">
-            {badgeText && <div className="card--badge">{badgeText}</div>}
-            <img src={`../images/${props.img}`} className="card--image" />
+            {
+                badgeText && 
+                <div className="card--badge">{badgeText}</div>
+            }
+            <img 
+                src={`.../images/${props.coverImg}`}
+                className="card--image" 
+                alt="product images"
+            />
             <div className="card--stats">
-                <img src="../images/star.png" className="card--star" />
-                <span>{props.rating}</span>
-                <span className="gray">({props.reviewCount}) • </span>
+                <img src={star} className="card--star" alt="star"/>
+                <span>{props.stats.rating}</span>
+                <span className="gray">({props.stats.reviewCount}) • </span>
                 <span className="gray">{props.location}</span>
             </div>
             <p className="card--title">{props.title}</p>
-            <p className="card--price"><span className="bold">From ${props.price}</span> / person</p>
+            <p className="card--price">
+                <span className="bold">From ${props.price}</span> / person
+            </p>
         </div>
     )
 }
